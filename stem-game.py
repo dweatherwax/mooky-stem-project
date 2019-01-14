@@ -25,10 +25,24 @@ def draw_background():
     DISPLAYSURF.blit(mooky_image, (605, 53))
 
 def draw_options():
-
+    
     text_font = pygame.font.SysFont('Arial', 20)
-    text_surface = text_font.render('a.', False, (0, 0, 0))
+    text_surface = text_font.render('a. Mooky is awesome', False, (0, 0, 0))
     DISPLAYSURF.blit(text_surface, (10, 635))
+
+    text1_font = pygame.font.SysFont('Arial', 20)
+    text1_surface = text1_font.render('b. Mooky is cool', False, (0, 0, 0))
+    DISPLAYSURF.blit(text1_surface, (10, 660))
+
+    text2_font = pygame.font.SysFont('Arial', 20)
+    text2_surface = text2_font.render('c. Mooky is the best', False, (0, 0, 0))
+    DISPLAYSURF.blit(text2_surface, (10, 685))
+
+def draw_text():
+
+    maintext_font = pygame.font.SysFont('Arial', 20)
+    maintext_surface = maintext_font.render('Mooky is awesome', False, (0, 0, 0))
+    DISPLAYSURF.blit(maintext_surface, (10, 200))
 
 
 def main():
@@ -46,6 +60,7 @@ def main():
     while True: # the main game loop
         draw_background()
         draw_options()
+        draw_text()
 
         for event in pygame.event.get():
             if event.type == QUIT:
