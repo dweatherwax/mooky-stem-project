@@ -1,4 +1,5 @@
 import pygame, sys
+import story
 from pygame.locals import *
 
 WHITE = (255, 255, 255)
@@ -38,10 +39,10 @@ def draw_options():
     text2_surface = text2_font.render('c. Mooky is the best', True, (0, 0, 0))
     DISPLAYSURF.blit(text2_surface, (10, 685))
 
-def draw_text():
+def draw_text(scene):
 
     maintext_font = pygame.font.SysFont('Arial', 20)
-    maintext_surface = maintext_font.render('Mooky is awesome', True, (0, 0, 0))
+    maintext_surface = maintext_font.render(scene[0], True, (0, 0, 0))
     DISPLAYSURF.blit(maintext_surface, (10, 200))
 
 
@@ -52,6 +53,8 @@ def main():
     FPS = 30 # frames per second setting
     fpsClock = pygame.time.Clock()
 
+    scene = story.get_first_scene()
+
     # set up the window
     pygame.display.set_caption("Mooky's Ski Mystery")
 
@@ -60,7 +63,7 @@ def main():
     while True: # the main game loop
         draw_background()
         draw_options()
-        draw_text()
+        draw_text(scene)
 
         for event in pygame.event.get():
             if event.type == QUIT:
