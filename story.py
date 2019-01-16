@@ -1,5 +1,8 @@
 FIRSTKEY = 'first'
-scenes = {FIRSTKEY : ('Mooky', )}
+scenes = {FIRSTKEY : ('here is the main story', 
+                      'mooky.png',  
+                      ('a.', 'b.', 'c.', 'd.') )
+         }
 
 def draw_message():
 
