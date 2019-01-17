@@ -73,9 +73,9 @@ def draw_options(surface, scene):
     options = scene[2]
     
     row = 635
-    for option in options: 
+    for (optiontext, optionkey) in options: 
         text_font = pygame.font.SysFont('Arial', 20)
-        text_surface = text_font.render(option, True, (0, 0, 0))
+        text_surface = text_font.render(optiontext, True, (0, 0, 0))
         surface.blit(text_surface, (10, row))
         row += 25 
 
