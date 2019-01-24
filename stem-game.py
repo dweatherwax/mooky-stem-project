@@ -51,6 +51,14 @@ def drawText(surface, text, color, rect, font, aa=False, bkg=None):
     return text
 
 
+def draw_maintext(surface, scene):
+
+    maintext_font = pygame.font.SysFont('Arial', 20)
+    #maintext_surface = maintext_font.render(scene[0], True, (0, 0, 0))
+    #surface.blit(maintext_surface, (10, 200))
+    drawText(surface, scene[0], BLACK, (10, 100, 500, 500), maintext_font, True)
+
+
 def draw_background(surface, scene):
     """ Draw the main screen background """
 
@@ -78,13 +86,6 @@ def draw_options(surface, scene):
         text_surface = text_font.render(optiontext, True, (0, 0, 0))
         surface.blit(text_surface, (10, row))
         row += 25 
-
-
-def draw_maintext(surface, scene):
-
-    maintext_font = pygame.font.SysFont('Arial', 20)
-    maintext_surface = maintext_font.render(scene[0], True, (0, 0, 0))
-    surface.blit(maintext_surface, (10, 200))
 
 
 def main():
