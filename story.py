@@ -41,3 +41,7 @@ scenes = {SCENE1 : ("Mooky is bored. Then he has an idea! He will go skiing. He 
 def get_first_scene():
 
     return scenes[SCENE1]
+
+def get_scene(scene):
+
+    return scenes[scene]

@@ -80,7 +80,7 @@ def draw_options(surface, scene):
         row += 25 
 
 
-def draw_text(surface, scene):
+def draw_maintext(surface, scene):
 
     maintext_font = pygame.font.SysFont('Arial', 20)
     maintext_surface = maintext_font.render(scene[0], True, (0, 0, 0))
@@ -105,14 +105,29 @@ def main():
     while True: # the main game loop
         draw_background(surface, scene)
         draw_options(surface, scene)
-        draw_text(surface, scene)
+        draw_maintext(surface, scene)
 
         for event in pygame.event.get():
             if event.type == QUIT:
                 pygame.quit()
                 sys.exit()
 
-        keystate = pygame.key.get_pressed()
+            if event.type == pygame.KEYDOWN:
+                options = scene[2]
+                if event.key == pygame.K_a:
+                    print("A was pressed\n")
+                    if len(options) > 0:
+                        selected_option = options[0]
+                        next_scene_name = selected_option[1]
+                        scene = story.get_scene(next_scene_name)
+                if event.key == pygame.K_b:
+                    print("B was pressed\n")
+                    if len(options) > 1:
+                        selected_option = options[1]
+                        next_scene_name = selected_option[1]
+                        scene = story.get_scene(next_scene_name)
+                    
+
 
         pygame.display.update()
         fpsClock.tick(FPS)
