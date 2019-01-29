@@ -15,7 +15,7 @@ scenes = {SCENE1 : ("Mooky is bored. Then he has an idea! He will go skiing. He 
                       'images/mooky-stem-1.jpg',
                       (('a. The mountain', SCENE4), ('b. The base lodge', SCENE5)) ), 
           SCENE3 : (' Mooky walks into the ski and snowboard shop. He looks around. He sees the ski section. Oh No! The skis have sold out! Mooky decides to search for his skis. Where should he start searching?', 
-                      'images/sad-mookey-stem.jpg',
+                      'images/sad-mooky-stem.jpg',
                       (('a. The mountain', SCENE4), ('b. The base lodge', SCENE5)) ), 
           SCENE4 : (' Mooky looked down the slope. Skiers and snow boarders rushed past him. Suddenly he spotted a pair of skis just like his! " Hey!" he shouted. The skier turned his head. When he noticed Mooky he froze, then took off. " Hey" shouted Mooky again as he chased the skier down a side trail. The skier disappeared as he turned a corner. Mooky skidded around the corner and came to a halt. The trail split into two paths. Which should he take?', 
                       'images/mooky-stem-5.jpg',
@@ -33,7 +33,7 @@ scenes = {SCENE1 : ("Mooky is bored. Then he has an idea! He will go skiing. He 
                       'images/mooky-stem-3.jpg',
                       (('a. The mountain', SCENE4), ) ), 
           SCENE9 : (' Mooky dragged his feet as he trudged into the base lodge. He sighed, gathered up his stuff, and drove home. He would never see those red skis again.', 
-                      'images/sad-mookey-stem.jpg',
+                      'images/sad-mooky-stem.jpg',
                       (('a. Restart', SCENE1), ) )
          }
 
